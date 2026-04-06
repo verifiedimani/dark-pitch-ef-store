@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>DARK PITCH EF | FAQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background: #000000; color: #E0E0E0; }
+        ::-webkit-scrollbar { width: 8px; background: #0A0A0A; }
+        ::-webkit-scrollbar-thumb { background: #3D0000; border-radius: 4px; }
+
+        .navbar { background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #3D0000; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.8rem; font-weight: 900; background: linear-gradient(135deg, #E0E0E0, #8B0000); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; letter-spacing: 2px; }
+        .member-badge { background: #1A0000; border: 1px solid #3D0000; color: #8B0000; padding: 8px 15px; border-radius: 30px; font-weight: bold; font-size: 0.9rem; }
+
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: #0A0A0A; border-top: 2px solid #3D0000; display: flex; overflow-x: auto; white-space: nowrap; padding: 10px 0; z-index: 1000; scrollbar-width: none; }
+        .bottom-nav::-webkit-scrollbar { display: none; }
+        .nav-item { color: #E0E0E0; text-decoration: none; display: inline-flex; flex-direction: column; align-items: center; font-size: 0.75rem; padding: 8px 15px; min-width: 70px; transition: all 0.3s; border-radius: 10px; }
+        .nav-item i { font-size: 1.5rem; margin-bottom: 4px; color: #8B0000; }
+        .nav-item:hover { background: rgba(139,0,0,0.2); transform: translateY(-3px); }
+        .nav-item.active { background: rgba(139,0,0,0.3); color: #8B0000; border: 1px solid #3D0000; }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px 20px 100px 20px; }
+        .page-title { text-align: center; font-size: 3rem; margin: 40px 0 20px; background: linear-gradient(135deg, #E0E0E0, #8B0000); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        .faq-grid { max-width: 800px; margin: 50px auto; }
+        .faq-item { background: #0A0A0A; border: 2px solid #3D0000; border-radius: 20px; margin-bottom: 20px; overflow: hidden; }
+        .faq-question { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: bold; color: #8B0000; }
+        .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s; color: #999; }
+        .faq-item.active .faq-answer { padding: 0 20px 20px; max-height: 200px; }
+
+        .footer { background: #0A0A0A; padding: 40px 20px 20px; margin-top: 60px; border-top: 2px solid #3D0000; text-align: center; }
+        .copyright { color: #444; font-size: 0.8rem; margin-top: 20px; }
+
+        @media (max-width: 768px) { .page-title { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">DARK<span>PITCH</span></a>
+        <div class="member-badge"><i class="fas fa-users"></i> 1,000+ MEMBERS</div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">🩸 FREQUENTLY ASKED QUESTIONS 🩸</h1>
+
+        <div class="faq-grid">
+            <div class="faq-item"><div class="faq-question">Is this safe? Will my account get banned? <i class="fas fa-plus"></i></div><div class="faq-answer">100% safe! We use official methods. 1,000+ members served with zero bans since 2019.</div></div>
+            <div class="faq-item"><div class="faq-question">How fast is delivery? <i class="fas fa-plus"></i></div><div class="faq-answer">Coins delivered in 5-10 minutes. Accounts in 10-30 minutes.</div></div>
+            <div class="faq-item"><div class="faq-question">What payment methods do you accept? <i class="fas fa-plus"></i></div><div class="faq-answer">PayPal, Binance, Bank Transfer, GPay, Cash App, Zelle, Gift Cards, and more.</div></div>
+            <div class="faq-item"><div class="faq-question">Do you offer refunds? <i class="fas fa-plus"></i></div><div class="faq-answer">Yes, refunds are available if delivery fails. Customer satisfaction guaranteed.</div></div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>HOME</span></a>
+        <a href="shop.html" class="nav-item"><i class="fas fa-store"></i><span>SHOP</span></a>
+        <a href="accounts.html" class="nav-item"><i class="fas fa-trophy"></i><span>ACCOUNTS</span></a>
+        <a href="proofs.html" class="nav-item"><i class="fas fa-scroll"></i><span>PROOFS</span></a>
+        <a href="reviews.html" class="nav-item"><i class="fas fa-star"></i><span>REVIEWS</span></a>
+        <a href="updates.html" class="nav-item"><i class="fas fa-gamepad"></i><span>UPDATES</span></a>
+        <a href="konami.html" class="nav-item"><i class="fas fa-certificate"></i><span>KONAMI</span></a>
+        <a href="contact.html" class="nav-item"><i class="fas fa-phone"></i><span>CONTACT</span></a>
+        <a href="vip.html" class="nav-item"><i class="fas fa-crown"></i><span>VIP</span></a>
+        <a href="faq.html" class="nav-item active"><i class="fas fa-question"></i><span>FAQ</span></a>
+    </div>
+
+    <footer class="footer">
+        <div class="copyright">© 2026 DARK PITCH EF STORE</div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                q.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

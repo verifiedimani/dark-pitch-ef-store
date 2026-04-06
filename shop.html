@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>DARK PITCH EF | Coin Prices & Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background: #000000; color: #E0E0E0; }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; }
+        ::-webkit-scrollbar-thumb { background: #3D0000; border-radius: 4px; }
+
+        .navbar { background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #3D0000; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.8rem; font-weight: 900; background: linear-gradient(135deg, #E0E0E0, #8B0000); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; letter-spacing: 2px; }
+        .member-badge { background: #1A0000; border: 1px solid #3D0000; color: #8B0000; padding: 8px 15px; border-radius: 30px; font-weight: bold; font-size: 0.9rem; }
+
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: #0A0A0A; border-top: 2px solid #3D0000; display: flex; overflow-x: auto; white-space: nowrap; padding: 10px 0; z-index: 1000; scrollbar-width: none; }
+        .bottom-nav::-webkit-scrollbar { display: none; }
+        .nav-item { color: #E0E0E0; text-decoration: none; display: inline-flex; flex-direction: column; align-items: center; font-size: 0.75rem; padding: 8px 15px; min-width: 70px; transition: all 0.3s; border-radius: 10px; }
+        .nav-item i { font-size: 1.5rem; margin-bottom: 4px; color: #8B0000; }
+        .nav-item:hover { background: rgba(139,0,0,0.2); transform: translateY(-3px); }
+        .nav-item.active { background: rgba(139,0,0,0.3); color: #8B0000; border: 1px solid #3D0000; }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px 20px 100px 20px; }
+        
+        .page-title { text-align: center; font-size: 3rem; margin: 40px 0 20px; letter-spacing: 3px; background: linear-gradient(135deg, #E0E0E0, #8B0000); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .page-subtitle { text-align: center; color: #666; margin-bottom: 40px; }
+
+        .coin-section { background: #0A0A0A; border: 2px solid #3D0000; border-radius: 30px; padding: 30px; margin: 30px 0; }
+        .coin-section h2 { color: #8B0000; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; font-size: 1.8rem; }
+        .coin-table { width: 100%; border-collapse: collapse; }
+        .coin-table tr { border-bottom: 1px solid #1A0000; }
+        .coin-table td { padding: 15px; text-align: center; }
+        .coin-package { font-weight: bold; font-size: 1.2rem; }
+        .coin-price { color: #8B0000; font-weight: bold; font-size: 1.2rem; }
+        .coin-buy { background: #1A0000; border: 1px solid #3D0000; color: #8B0000; padding: 8px 20px; border-radius: 20px; text-decoration: none; transition: all 0.3s; display: inline-block; }
+        .coin-buy:hover { background: #3D0000; color: #E0E0E0; }
+
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; margin: 50px 0; }
+        .feature-card { background: #0A0A0A; border: 1px solid #3D0000; border-radius: 20px; padding: 25px; text-align: center; }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .feature-card h3 { color: #8B0000; margin-bottom: 10px; }
+
+        .footer { background: #0A0A0A; padding: 40px 20px 20px; margin-top: 60px; border-top: 2px solid #3D0000; text-align: center; }
+        .copyright { color: #444; font-size: 0.8rem; margin-top: 20px; }
+
+        @media (max-width: 768px) {
+            .page-title { font-size: 2rem; }
+            .coin-table td { padding: 10px; font-size: 0.9rem; }
+            .coin-price { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">DARK<span>PITCH</span></a>
+        <div class="member-badge"><i class="fas fa-users"></i> 1,000+ MEMBERS</div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">🩸 DARK PITCH <span style="color:#8B0000;">SHOP</span> 🩸</h1>
+        <p class="page-subtitle">Cheapest Coins • Instant Delivery • 100% Safe</p>
+
+        <!-- iOS COINS -->
+        <div class="coin-section">
+            <h2><i class="fab fa-apple"></i> iOS COINS • 100% LEGAL 👿</h2>
+            <table class="coin-table">
+                <tr><td class="coin-package">1,000 🪙</td><td class="coin-price">₹820 / $9</td><td><a href="#" class="coin-buy buy-coin" data-coins="1000">BUY NOW 🔥</a></td></tr>
+                <tr><td class="coin-package">2,130 🪙</td><td class="coin-price">₹1,500 / $17</td><td><a href="#" class="coin-buy buy-coin" data-coins="2130">BUY NOW 🔥</a></td></tr>
+                <tr><td class="coin-package">3,250 🪙</td><td class="coin-price">₹2,300 / $25</td><td><a href="#" class="coin-buy buy-coin" data-coins="3250">BUY NOW 🔥</a></td></tr>
+                <tr><td class="coin-package">5,700 🪙</td><td class="coin-price">₹3,700 / $41</td><td><a href="#" class="coin-buy buy-coin" data-coins="5700">BUY NOW 🔥</a></td></tr>
+                <tr><td class="coin-package">12,800 🪙</td><td class="coin-price">₹7,500 / $84</td><td><a href="#" class="coin-buy buy-coin" data-coins="12800">BUY NOW 🔥</a></td></tr>
+                <tr><td class="coin-package">25,600 🪙</td><td class="coin-price">₹14,800 / $162</td><td><a href="#" class="coin-buy buy-coin" data-coins="25600">BUY NOW 🔥</a></td></tr>
+            </table>
+        </div>
+
+        <!-- ANDROID COINS -->
+        <div class="coin-section">
+            <h2><i class="fab fa-android"></i> ANDROID COINS • 100% LEGAL 💀</h2>
+            <table class="coin-table">
+                <tr><td class="coin-package">1,000 🪙</td><td class="coin-price">₹820 / $9</td><td><a href="#" class="coin-buy buy-coin" data-coins="1000">BUY NOW 🔥</a></td></tr>
+                <tr><td class="coin-package">2,130 🪙</td><td class="coin-price">₹1,500 / $17</td><td><a href="#" class="coin-buy buy-coin" data-coins="2130">BUY NOW 🔥</a></td></tr>
+                <tr><td class="coin-package">3,250 🪙</td><td class="coin-price">₹2,300 / $25</td><td><a href="#" class="coin-buy buy-coin" data-coins="3250">BUY NOW 🔥</a></td></tr>
+                <tr><td class="coin-package">5,700 🪙</td><td class="coin-price">₹3,700 / $41</td><td><a href="#" class="coin-buy buy-coin" data-coins="5700">BUY NOW 🔥</a></td></tr>
+                <tr><td class="coin-package">12,800 🪙</td><td class="coin-price">₹7,500 / $84</td><td><a href="#" class="coin-buy buy-coin" data-coins="12800">BUY NOW 🔥</a></td></tr>
+                <tr><td class="coin-package">25,600 🪙</td><td class="coin-price">₹14,800 / $162</td><td><a href="#" class="coin-buy buy-coin" data-coins="25600">BUY NOW 🔥</a></td></tr>
+            </table>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card"><div class="feature-icon">⚡</div><h3>5-10 MIN DELIVERY</h3><p>Instant transfer</p></div>
+            <div class="feature-card"><div class="feature-icon">🛡️</div><h3>NO BAN RISK</h3><p>100% safe method</p></div>
+            <div class="feature-card"><div class="feature-icon">👑</div><h3>7+ YEARS</h3><p>Trusted since 2019</p></div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>HOME</span></a>
+        <a href="shop.html" class="nav-item active"><i class="fas fa-store"></i><span>SHOP</span></a>
+        <a href="accounts.html" class="nav-item"><i class="fas fa-trophy"></i><span>ACCOUNTS</span></a>
+        <a href="proofs.html" class="nav-item"><i class="fas fa-scroll"></i><span>PROOFS</span></a>
+        <a href="reviews.html" class="nav-item"><i class="fas fa-star"></i><span>REVIEWS</span></a>
+        <a href="updates.html" class="nav-item"><i class="fas fa-gamepad"></i><span>UPDATES</span></a>
+        <a href="konami.html" class="nav-item"><i class="fas fa-certificate"></i><span>KONAMI</span></a>
+        <a href="contact.html" class="nav-item"><i class="fas fa-phone"></i><span>CONTACT</span></a>
+        <a href="vip.html" class="nav-item"><i class="fas fa-crown"></i><span>VIP</span></a>
+        <a href="faq.html" class="nav-item"><i class="fas fa-question"></i><span>FAQ</span></a>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-logo" style="font-size: 1.5rem; font-weight: 900; margin-bottom: 20px;">DARK<span style="color:#8B0000;">PITCH</span></div>
+        <div class="copyright">© 2026 DARK PITCH EF STORE | Official eFootball Partner</div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.buy-coin').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const coins = btn.getAttribute('data-coins');
+                window.open(`https://wa.me/447361541607?text=I%20want%20to%20buy%20${coins}%20coins%20from%20Dark%20Pitch`, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>

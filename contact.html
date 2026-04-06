@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>DARK PITCH EF | Contact the Dark Council</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background: #000000; color: #E0E0E0; }
+        ::-webkit-scrollbar { width: 8px; background: #0A0A0A; }
+        ::-webkit-scrollbar-thumb { background: #3D0000; border-radius: 4px; }
+
+        .navbar { background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #3D0000; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.8rem; font-weight: 900; background: linear-gradient(135deg, #E0E0E0, #8B0000); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; letter-spacing: 2px; }
+        .member-badge { background: #1A0000; border: 1px solid #3D0000; color: #8B0000; padding: 8px 15px; border-radius: 30px; font-weight: bold; font-size: 0.9rem; }
+
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: #0A0A0A; border-top: 2px solid #3D0000; display: flex; overflow-x: auto; white-space: nowrap; padding: 10px 0; z-index: 1000; scrollbar-width: none; }
+        .bottom-nav::-webkit-scrollbar { display: none; }
+        .nav-item { color: #E0E0E0; text-decoration: none; display: inline-flex; flex-direction: column; align-items: center; font-size: 0.75rem; padding: 8px 15px; min-width: 70px; transition: all 0.3s; border-radius: 10px; }
+        .nav-item i { font-size: 1.5rem; margin-bottom: 4px; color: #8B0000; }
+        .nav-item:hover { background: rgba(139,0,0,0.2); transform: translateY(-3px); }
+        .nav-item.active { background: rgba(139,0,0,0.3); color: #8B0000; border: 1px solid #3D0000; }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px 20px 100px 20px; }
+        .page-title { text-align: center; font-size: 3rem; margin: 40px 0 20px; background: linear-gradient(135deg, #E0E0E0, #8B0000); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        .admins-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 800px; margin: 50px auto; }
+        .admin-card { background: #0A0A0A; border: 2px solid #3D0000; border-radius: 30px; padding: 40px; text-align: center; transition: all 0.3s; }
+        .admin-card:hover { transform: translateY(-5px); border-color: #8B0000; }
+        .admin-icon { font-size: 4rem; margin-bottom: 15px; }
+        .admin-name { font-size: 2rem; font-weight: bold; color: #8B0000; margin-bottom: 10px; }
+        .admin-chat { background: #1A0000; border: 1px solid #3D0000; color: #8B0000; padding: 15px 30px; border-radius: 40px; text-decoration: none; display: inline-block; margin-top: 20px; font-weight: bold; }
+
+        .warning { background: #1A0000; border: 2px solid #8B0000; border-radius: 20px; padding: 25px; text-align: center; margin: 40px 0; }
+        .warning h3 { color: #8B0000; margin-bottom: 15px; }
+
+        .footer { background: #0A0A0A; padding: 40px 20px 20px; margin-top: 60px; border-top: 2px solid #3D0000; text-align: center; }
+        .copyright { color: #444; font-size: 0.8rem; margin-top: 20px; }
+
+        @media (max-width: 768px) { .page-title { font-size: 2rem; } .admins-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">DARK<span>PITCH</span></a>
+        <div class="member-badge"><i class="fas fa-users"></i> 1,000+ MEMBERS</div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">🩸 CONTACT THE DARK COUNCIL 🩸</h1>
+
+        <div class="warning">
+            <h3>⚠️ WARNING ⚠️</h3>
+            <p>ONLY contact the admins below. Anyone else who messages you is a SCAMMER. Stay safe!</p>
+        </div>
+
+        <div class="admins-grid">
+            <div class="admin-card">
+                <div class="admin-icon">👿</div>
+                <div class="admin-name">EMPEROR</div>
+                <div>Founder & Dark Lord</div>
+                <a href="#" class="admin-chat" id="emperorChat"><i class="fab fa-whatsapp"></i> CHAT WITH EMPEROR</a>
+            </div>
+            <div class="admin-card">
+                <div class="admin-icon">💀</div>
+                <div class="admin-name">GENERAL</div>
+                <div>Commander of Shadows</div>
+                <a href="#" class="admin-chat" id="generalChat"><i class="fab fa-whatsapp"></i> CHAT WITH GENERAL</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>HOME</span></a>
+        <a href="shop.html" class="nav-item"><i class="fas fa-store"></i><span>SHOP</span></a>
+        <a href="accounts.html" class="nav-item"><i class="fas fa-trophy"></i><span>ACCOUNTS</span></a>
+        <a href="proofs.html" class="nav-item"><i class="fas fa-scroll"></i><span>PROOFS</span></a>
+        <a href="reviews.html" class="nav-item"><i class="fas fa-star"></i><span>REVIEWS</span></a>
+        <a href="updates.html" class="nav-item"><i class="fas fa-gamepad"></i><span>UPDATES</span></a>
+        <a href="konami.html" class="nav-item"><i class="fas fa-certificate"></i><span>KONAMI</span></a>
+        <a href="contact.html" class="nav-item active"><i class="fas fa-phone"></i><span>CONTACT</span></a>
+        <a href="vip.html" class="nav-item"><i class="fas fa-crown"></i><span>VIP</span></a>
+        <a href="faq.html" class="nav-item"><i class="fas fa-question"></i><span>FAQ</span></a>
+    </div>
+
+    <footer class="footer">
+        <div class="copyright">© 2026 DARK PITCH EF STORE</div>
+    </footer>
+
+    <script>
+        document.getElementById('emperorChat')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('https://wa.me/447361541607?text=Hello%20Emperor!%20I%20want%20to%20join%20Dark%20Pitch', '_blank');
+        });
+        document.getElementById('generalChat')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('https://wa.me/Y447919710981?text=Hello%20General!%20I%20need%20help', '_blank');
+        });
+    </script>
+</body>
+</html>
